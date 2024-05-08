@@ -1,0 +1,17 @@
+name: Run Bash Command
+
+on: [push]
+
+jobs:
+  run_bash_command:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run a bash script
+        run: |
+          echo "Hello, world!"
+          echo "Running a bash command."
+          sudo systemctl status chronyd.service
+          sudo cat /etc/passwd
