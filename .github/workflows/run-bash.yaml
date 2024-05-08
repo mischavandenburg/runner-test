@@ -14,4 +14,5 @@ jobs:
           echo "Hello, world!"
           echo "Running a bash command."
           sudo systemctl status chronyd.service
+          sudo systemctl restart chronyd.service
           sudo cat /etc/passwd
